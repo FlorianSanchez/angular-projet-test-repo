@@ -1,0 +1,69 @@
+<div class="layout">
+
+    <div class="form-container">
+        <form [formGroup]="formCars" (submit)="submit()">
+
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label> Nom
+                </mat-label>
+                <input matInput formControlName="nom" required>
+                <mat-error *ngIf="formCars.controls.nom.touched && formCars.controls.nom.invalid">
+                    <span *ngIf="formCars.controls.nom.errors.required">Ce champ est obligaatoire.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label> marque
+                </mat-label>
+                <input matInput formControlName="marque" type="marque" required>
+                <mat-error *ngIf="formCars.controls.marque.touched && formCars.controls.marque.invalid">
+                    <span *ngIf="formCars.controls.marque.errors.required">Ce champ est obligaatoire.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label> Immatriculation
+                </mat-label>
+                <input matInput formControlName="immatriculation" required>
+                <mat-error *ngIf="formCars.controls.immatriculation.touched && formCars.controls.immatriculation.invalid">
+                    <span *ngIf="formCars.controls.immatriculation.errors.required">Ce champ est obligaatoire.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label> Date d'achat
+                </mat-label>
+                <input matInput formControlName="datedachat" required>
+                <mat-error *ngIf="formCars.controls.datedachat.touched && formCars.controls.datedachat.invalid">
+                    <span *ngIf="formCars.controls.datedachat.errors.required">Ce champ est obligaatoire.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label> Couleur
+                </mat-label>
+                <input matInput formControlName="couleur" required>
+                <mat-error *ngIf="formCars.controls.couleur.touched && formCars.controls.couleur.invalid">
+                    <span *ngIf="formCars.controls.couleur.errors.required">Ce champ est obligaatoire.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label> Etat
+                </mat-label>
+                <input matInput formControlName="etat" required>
+                <mat-error *ngIf="formCars.controls.etat.touched && formCars.controls.etat.invalid">
+                    <span *ngIf="formCars.controls.etat.errors.required">Ce champ est obligaatoire.</span>
+                </mat-error>
+            </mat-form-field>
+
+            <button [disabled]="!formCars.valid" mat-raised-button color="primary" type="submit">{{ (dataForChange) ? 'Modifier' : 'Creer' }}</button>
+
+        </form>
+    </div>
+
+    <div class="listing">
+        <app-listing-cars (change)="carChange($event)"></app-listing-cars>
+    </div>
+
+</div>

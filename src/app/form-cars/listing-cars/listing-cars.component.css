@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    padding: 0.5rem;
+    min-width: 800px;
+}
+
+.icons-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.action-cell-row {
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.form-container {
+    text-align: center;
+    width: 400 px;
+    margin: 2rem
+}
+
+.form-field {
+    display: block
+}
+
+.layout {
+    display: flex;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.listing {
+    margin: 2rem;
+}
